@@ -7,6 +7,13 @@ Description
 A simple command line example of how to use the [Goodreads oAuth API](https://www.goodreads.com/api/)
 from Java using the [Google oAuth Java package](https://code.google.com/p/google-oauth-java-client/).
 
+How to run
+---------------
+
+Check out this repository, and run ```mvn compile exec:java``` in the base directory. You will need to have [Maven installed](https://maven.apache.org/install.html).
+
+Note that the code sample will fail unless you set valid values for ```GOODREADS_KEY``` and ```GOODREADS_SECRET``` in ```GoodreadsOAuthSample.java```.
+
 Credit
 ---------------
 This is heavily based on this post by StackOverflow user [sqeezer](http://stackoverflow.com/users/587574/sqeezer):
