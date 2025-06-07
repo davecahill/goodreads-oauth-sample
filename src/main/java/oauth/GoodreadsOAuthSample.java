@@ -49,14 +49,14 @@ public class GoodreadsOAuthSample {
         accessTempToken.temporaryToken = temporaryTokenResponse.token;
         String authUrl = accessTempToken.build();
 
-        // Redirect to Authenticate URL in order to get Verifier Code
+        // Have the user manually visit the Authenticate URL to grant access (no verifier code)
         System.out.println("Goodreads oAuth sample: Please visit the following URL to authorize:");
         System.out.println(authUrl);
         System.out.println("Waiting 10s to allow time for visiting auth URL and authorizing...");
         Thread.sleep(10000);
 
         System.out.println("Waiting time complete - assuming access granted and attempting to get access token");
-        // Get Access Token using Temporary token and Verifier Code
+        // Get Access Token using the temporary token
         OAuthGetAccessToken getAccessToken = new OAuthGetAccessToken(ACCESS_TOKEN_URL);
         getAccessToken.signer = signer;
         // NOTE: This is the main difference from the StackOverflow example
