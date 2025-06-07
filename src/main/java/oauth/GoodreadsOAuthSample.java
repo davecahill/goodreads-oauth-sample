@@ -19,7 +19,7 @@ import java.io.IOException;
  *
  * Adapted from user Sqeezer's StackOverflow post at
  * http://stackoverflow.com/questions/15194182/examples-for-oauth1-using-google-api-java-oauth
- * to work with Goodreads' oAuth API.
+ * to work with Goodreads' OAuth API.
  *
  * Get a key / secret by registering at https://www.goodreads.com/api/keys
  * and replace YOUR_KEY_HERE / YOUR_SECRET_HERE in the code below.
@@ -50,7 +50,7 @@ public class GoodreadsOAuthSample {
         String authUrl = accessTempToken.build();
 
         // Redirect to Authenticate URL in order to get Verifier Code
-        System.out.println("Goodreads oAuth sample: Please visit the following URL to authorize:");
+        System.out.println("Goodreads OAuth sample: Please visit the following URL to authorize:");
         System.out.println(authUrl);
         System.out.println("Waiting 10s to allow time for visiting auth URL and authorizing...");
         Thread.sleep(10000);
